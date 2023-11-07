@@ -1,11 +1,20 @@
+import { Provider } from "react-redux";
+import store from "./store";
+
 import AppThemeProvider from "./theme/AppThemeProvider";
+import { AlertProvider } from "./context/AlertContext";
+
 import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <AppThemeProvider>
-      <Home />
-    </AppThemeProvider>
+    <Provider store={store}>
+      <AppThemeProvider>
+        <AlertProvider>
+          <Home />
+        </AlertProvider>
+      </AppThemeProvider>
+    </Provider>
   );
 };
 
