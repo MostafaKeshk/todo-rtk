@@ -19,7 +19,7 @@ const TodoForm: React.FC<IProps> = ({ handleAdd, value, handleChange }) => {
       }}
     >
       <TextField
-        label="Outlined"
+        label="Add todo"
         variant="outlined"
         onChange={handleChange}
         value={value}
